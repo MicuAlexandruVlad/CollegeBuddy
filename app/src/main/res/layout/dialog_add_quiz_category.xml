@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_dialog_title"
+        android:textColor="@color/md_black"
+        android:textSize="20sp"
+        android:layout_marginStart="24dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:text="New Category"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_category_name"
+        android:layout_below="@id/tv_dialog_title"
+        android:layout_marginTop="16dp"
+        android:hint="ex: Computer Science"
+        android:inputType="textCapWords"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        tools:ignore="HardcodedText" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_category_name"
+        android:layout_marginTop="28dp"
+        >
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete"
+            android:layout_marginTop="8dp"
+            android:layout_toStartOf="@id/btn_add_or_edit_category"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:id="@+id/btn_delete_category"
+            android:background="@android:color/transparent"
+            android:textColor="@color/colorAccent"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add"
+            android:id="@+id/btn_add_or_edit_category"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="8dp"
+            android:background="@android:color/transparent"
+            android:textColor="@color/colorAccent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            tools:ignore="HardcodedText" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

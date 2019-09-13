@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">LicenseApp</string>
+    <string name="fingerprint_login">Please place your fingertip on the scanner to verify your identity</string>
+    <string name="facebook_app_id">375485099869599</string>
+    <string name="fb_login_protocol_scheme">fb375485099869599</string>
+    <string name="add_college">You can always add your university by pressing the button below.</string>
+    <string name="address_example">The Old Schools, Trinity Ln, Cambridge CB2 1TN, United Kingdom</string>
+    <string name="add_image_info">After you copied the link of your desired photo, simply touch the image area above.</string>
+    <string name="add_faculty">Add a new faculty using the add button below</string>
+    <string name="add_group">Add a new group using the add button below</string>
+    <string name="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ut neque sed dolor congue convallis vitae eget mi. Pellentesque tristique felis libero, at ornare eros luctus ac. Pellentesque gravida tristique consequat. Etiam diam turpis, lacinia ut accumsan nec, commodo sit amet nulla. Ut placerat orci ac tincidunt dignissim. Praesent ligula velit, dignissim id orci vitae, placerat laoreet arcu. Nullam iaculis magna quis magna porta ullamcorper. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla eget elit at arcu ultrices vulputate ac vitae libero. Integer eu pulvinar neque. Praesent mauris purus, condimentum non odio non, pulvinar feugiat quam.Nullam bibendum ligula id ligula tristique, ac tristique magna tempor. Donec at viverra lacus, in tristique odio. Phasellus orci odio, cursus id erat eu, ultrices condimentum eros. In convallis vel leo ac volutpat. Ut posuere quam vitae purus scelerisque feugiat. Fusce aliquam gravida lorem, quis ultricies purus porttitor id. Aenean ut mollis ex. Donec vitae orci augue. Suspendisse at velit luctus, ultricies lectus eget, porttitor sapien. Quisque id erat diam. Quisque lorem magna, pellentesque sed gravida in, ullamcorper ut tellus. Sed facilisis nisl non nibh finibus, ac consequat justo viverra.Mauris dapibus augue laoreet sollicitudin molestie. Vivamus non massa et risus gravida tincidunt eget eu justo. Duis non mi eu urna consequat gravida. In hac habitasse platea dictumst. Sed id varius ex, at porttitor ipsum. Proin commodo risus id justo semper, a pretium dolor gravida. Nulla facilisi. Nam lacinia imperdiet mollis. Fusce metus tortor, luctus nec ex sed, aliquam iaculis ligula. Donec malesuada sed diam quis sagittis.</string>
+    <string name="add_group_message">Your are about to add a new group. Please select the type of group you want:</string>
+    <string name="question_place_holder">Q:  Some text that represents a question with multiple lines of text that will have one or more correct answers. Do you agree ?</string>
+    <string name="answer_tip">Add an answer by pressing the plus button below.</string>
+    <string name="quiz_description_sample">Some description that describes this actual quiz. And even more description that describes this quiz.</string>
+    <string name="no_groups_found">No groups available for this faculty :(. Joined groups and private groups will not show. Try adding one by pressing the plus button below.</string>
+    <string name="lorem_2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras accumsan erat lacus, et euismod turpis iaculis ut. Suspendisse rutrum ornare urna. Morbi et aliquam nibh.</string>
+    <string name="saved_user_json">1234</string>
+    <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
+    <string name="background">background</string>
+</resources>

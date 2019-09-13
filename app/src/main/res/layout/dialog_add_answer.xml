@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_dialog_title"
+        android:textColor="@color/md_black"
+        android:textSize="20sp"
+        android:layout_marginStart="24dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:text="Add Answer"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText" />
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/met_answer_text"
+        android:layout_below="@id/tv_dialog_title"
+        android:layout_marginTop="16dp"
+        app:met_floatingLabel="highlight"
+        app:met_floatingLabelText="Answer"
+        android:inputType="textCapSentences"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        tools:ignore="HardcodedText" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/met_answer_text"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:id="@+id/rl_1"
+        >
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cb_correct_answer"
+            android:layout_centerVertical="true"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/cb_correct_answer"
+            android:layout_centerVertical="true"
+            android:textSize="16sp"
+            android:textColor="@color/md_black"
+            android:layout_marginStart="8dp"
+            android:text="Is this the correct answer ?"
+            tools:ignore="HardcodedText" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_1"
+        android:layout_marginTop="24dp"
+        >
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete"
+            android:layout_marginTop="8dp"
+            android:layout_toStartOf="@id/btn_add_or_edit_answer"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:id="@+id/btn_delete_answer"
+            android:background="@android:color/transparent"
+            android:textColor="@color/colorAccent"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add"
+            android:id="@+id/btn_add_or_edit_answer"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="8dp"
+            android:background="@android:color/transparent"
+            android:textColor="@color/colorAccent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            tools:ignore="HardcodedText" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

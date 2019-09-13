@@ -1,0 +1,869 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/md_white"
+    tools:context=".QuizWizardActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="16dp"
+        android:animateLayoutChanges="true"
+        android:id="@+id/rl_header">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginEnd="16dp"
+            android:id="@+id/iv_go_back"
+            android:src="@drawable/go_back"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_title"
+            android:layout_toEndOf="@id/iv_go_back"
+            android:text="Quiz Wizard"
+            android:textColor="@color/md_black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_centerVertical="true"
+            tools:ignore="HardcodedText" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_header">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/rl_step_1"
+            android:visibility="visible">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_above="@id/btn_to_step_2"
+                android:layout_marginBottom="16dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:animateLayoutChanges="true">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tv_1"
+                        android:textColor="@color/material_blue_grey_500"
+                        android:textStyle="normal"
+                        android:textSize="14sp"
+                        android:text="Please fill out the form below"
+                        android:layout_marginStart="16dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:id="@+id/tv_name_label"
+                        android:textStyle="normal"
+                        android:text="Quiz name"
+                        android:textColor="@color/colorAccent"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="28dp"
+                        android:layout_below="@id/tv_1"
+                        tools:ignore="HardcodedText" />
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/met_quiz_name"
+                        android:layout_below="@id/tv_name_label"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        app:met_floatingLabel="none"
+                        android:inputType="textCapWords"
+                        android:hint="ex: Math"
+                        tools:ignore="HardcodedText,LabelFor" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:id="@+id/tv_description_label"
+                        android:textStyle="normal"
+                        android:text="Quiz description"
+                        android:textColor="@color/colorAccent"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_below="@id/met_quiz_name"
+                        tools:ignore="HardcodedText" />
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/met_quiz_description"
+                        android:layout_below="@id/tv_description_label"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        app:met_floatingLabel="none"
+                        android:inputType="textCapSentences"
+                        tools:ignore="HardcodedText,LabelFor" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:textSize="16sp"
+                        android:id="@+id/tv_13"
+                        android:textColor="@color/material_blue_grey_700"
+                        android:text="Quiz difficulty"
+                        android:layout_below="@id/met_quiz_description"
+                        tools:ignore="HardcodedText" />
+
+                    <com.xw.repo.BubbleSeekBar
+                        android:id="@+id/bsb_difficulty"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_13"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginTop="8dp"
+                        app:bsb_track_color="@color/material_blue_grey_700"
+                        app:bsb_second_track_color="@color/colorPrimaryDark"
+                        app:bsb_section_count="2"
+                        app:bsb_max="2"
+                        app:bsb_min="0"
+                        app:bsb_progress="0"
+                        app:bsb_seek_step_section="true"
+                        app:bsb_section_text_position="below_section_mark"
+                        app:bsb_touch_to_seek="true"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tv_3"
+                        android:layout_below="@id/bsb_difficulty"
+                        android:textColor="@color/material_blue_grey_700"
+                        android:textStyle="normal"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:textSize="16sp"
+                        android:text="Would you like the quiz to be timed ?"
+                        android:layout_marginStart="16dp"
+                        tools:ignore="HardcodedText" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:id="@+id/ll_1"
+                        android:layout_below="@id/tv_3"
+                        android:layout_marginTop="8dp">
+
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/cb_timed_quiz"
+                            android:layout_marginStart="16dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:layout_marginStart="8dp"
+                            android:textColor="@color/material_blue_grey_700"
+                            android:text="Yes"
+                            tools:ignore="HardcodedText" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tv_4"
+                        android:visibility="gone"
+                        android:layout_below="@id/ll_1"
+                        android:textColor="@color/material_blue_grey_700"
+                        android:textStyle="normal"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:textSize="16sp"
+                        android:text="Would you like the timer to have a limit ?"
+                        android:layout_marginStart="16dp"
+                        tools:ignore="HardcodedText" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:id="@+id/ll_limited_timer_options"
+                        android:layout_below="@id/tv_4"
+                        android:visibility="gone"
+                        android:layout_marginTop="8dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/rb_limited_timer_yes"
+                                android:layout_marginStart="16dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="16sp"
+                                android:layout_marginStart="8dp"
+                                android:textColor="@color/material_blue_grey_700"
+                                android:text="Yes"
+                                tools:ignore="HardcodedText" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="4dp">
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/rb_limited_timer_no"
+                                android:layout_marginStart="16dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="16sp"
+                                android:layout_marginStart="8dp"
+                                android:textColor="@color/material_blue_grey_700"
+                                android:text="No"
+                                tools:ignore="HardcodedText" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/et_timer_limit"
+                        android:visibility="gone"
+                        android:layout_below="@id/ll_limited_timer_options"
+                        android:layout_marginTop="16dp"
+                        android:inputType="time"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textStyle="bold"
+                        android:letterSpacing=".4"
+                        android:textSize="20sp"
+                        android:textAlignment="center"
+                        android:hint="mm:ss"
+                        tools:ignore="HardcodedText" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/et_timer_limit"
+                        android:layout_marginTop="16dp"
+                        android:paddingBottom="8dp"
+                        android:id="@+id/rl_2">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Categories"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:id="@+id/tv_5"
+                            android:layout_centerVertical="true"
+                            android:textColor="@color/material_blue_grey_700"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="24dp"
+                            tools:ignore="HardcodedText" />
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/btn_round_accent"
+                            android:id="@+id/rl_add_category"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginStart="16dp"
+                            >
+
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="40dp"
+                                android:padding="8dp"
+                                android:src="@drawable/add"/>
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rv_categories"
+                        android:layout_below="@id/rl_2"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        />
+
+                </RelativeLayout>
+
+            </ScrollView>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_round_primary"
+                android:id="@+id/btn_to_step_2"
+                android:textColor="@color/md_white"
+                android:text="Next step"
+                android:textSize="16sp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="16dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                tools:ignore="HardcodedText" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/rl_step_2"
+            android:animateLayoutChanges="true"
+            android:visibility="gone">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/ll_buttons_holder"
+                android:layout_marginBottom="16dp"
+                android:layout_alignParentTop="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:animateLayoutChanges="true">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tv_2"
+                        android:textColor="@color/material_blue_grey_500"
+                        android:textStyle="normal"
+                        android:textSize="14sp"
+                        android:text="Add questions to your quiz"
+                        android:layout_marginStart="16dp"
+                        tools:ignore="HardcodedText" />
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/met_question_text"
+                        android:layout_below="@id/tv_2"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginTop="24dp"
+                        android:inputType="textCapSentences"
+                        app:met_floatingLabelText="Question"
+                        app:met_floatingLabel="highlight"
+                        android:hint="Type question here"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tv_answer_tip"
+                        android:textSize="15sp"
+                        android:layout_below="@id/met_question_text"
+                        android:layout_marginTop="8dp"
+                        android:textColor="@color/material_grey_700"
+                        android:text="@string/answer_tip"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tv_7"
+                        android:text="Question type"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/material_blue_grey_700"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_below="@id/tv_answer_tip"
+                        tools:ignore="HardcodedText" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ll_question_type"
+                        android:layout_below="@id/tv_7"
+                        android:layout_marginTop="16dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="16dp"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/rb_true_or_false"
+                                android:layout_gravity="center_vertical"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="16sp"
+                                android:layout_marginStart="8dp"
+                                android:textColor="@color/material_blue_grey_700"
+                                android:layout_gravity="center_vertical"
+                                android:text="True or False"
+                                tools:ignore="HardcodedText" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="16dp"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/rb_multiple_choice"
+                                android:layout_gravity="center_vertical"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="16sp"
+                                android:layout_marginStart="8dp"
+                                android:textColor="@color/material_blue_grey_700"
+                                android:layout_gravity="center_vertical"
+                                android:text="Multiple Choice"
+                                tools:ignore="HardcodedText" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="16dp"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:id="@+id/rb_single_choice"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="16sp"
+                                android:layout_marginStart="8dp"
+                                android:layout_gravity="center_vertical"
+                                android:textColor="@color/material_blue_grey_700"
+                                android:text="Single Choice"
+                                tools:ignore="HardcodedText" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tv_6"
+                        android:text="Answers"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/material_blue_grey_700"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_below="@id/ll_question_type"
+                        tools:ignore="HardcodedText" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rv_answers"
+                        android:layout_below="@id/tv_6"
+                        android:layout_marginTop="8dp"
+                        android:layoutAnimation="@anim/layout_animation_fall_down"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tv_explanation_label"
+                        android:textSize="15sp"
+                        android:layout_below="@id/rv_answers"
+                        android:layout_marginTop="16dp"
+                        android:textColor="@color/material_grey_700"
+                        android:text="Add an explanation to this question"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:visibility="gone"
+                        tools:ignore="HardcodedText" />
+
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/met_question_explanation"
+                        android:layout_below="@id/tv_explanation_label"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:visibility="gone"
+                        android:hint="(Optional)"
+                        android:inputType="textCapSentences|textMultiLine"
+                        tools:ignore="HardcodedText" />
+
+                </RelativeLayout>
+
+            </ScrollView>
+
+            <android.support.design.widget.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/ll_buttons_holder"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="16dp"
+                android:id="@+id/fab_add_answer"
+                android:src="@drawable/add"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ll_buttons_holder"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_round_accent"
+                    android:id="@+id/btn_add_question"
+                    android:textColor="@color/md_white"
+                    android:text="Add question"
+                    android:textSize="16sp"
+                    android:layout_marginStart="16dp"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="8dp"
+                    tools:ignore="HardcodedText" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_round_primary"
+                    android:id="@+id/btn_to_step_3"
+                    android:textColor="@color/md_white"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="Next step"
+                    android:textSize="16sp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="16dp"
+                    tools:ignore="HardcodedText" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/rl_step_3"
+            android:animateLayoutChanges="true"
+            android:visibility="gone"
+            >
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:fillViewport="true"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clipToPadding="false"
+                    android:paddingBottom="16dp"
+                    >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tv_step_3_title"
+                        android:textSize="18sp"
+                        android:text="Quiz Review"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textStyle="bold"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="16dp"
+                        tools:ignore="HardcodedText" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:id="@+id/ll_2"
+                        android:layout_marginTop="16dp"
+                        android:layout_below="@id/tv_step_3_title"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/tv_9"
+                            android:text="Quiz name: "
+                            android:layout_marginStart="16dp"
+                            android:textSize="16sp"
+                            android:textColor="@color/material_blue_grey_700"
+                            android:textStyle="normal"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:id="@+id/tv_review_quiz_name"
+                            android:text="Finals Quiz"
+                            android:textSize="16sp"
+                            android:textColor="@color/material_blue_grey_700"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:id="@+id/ll_5"
+                        android:layout_marginTop="8dp"
+                        android:layout_below="@id/ll_2"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/tv_12"
+                            android:text="Quiz description: "
+                            android:layout_marginStart="16dp"
+                            android:textSize="16sp"
+                            android:textColor="@color/material_blue_grey_700"
+                            android:textStyle="normal"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/tv_review_quiz_description"
+                            android:layout_marginStart="8dp"
+                            android:text="Some quiz"
+                            android:textSize="16sp"
+                            android:textColor="@color/material_blue_grey_700"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/ll_5"
+                        android:id="@+id/ll_3"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/tv_10"
+                            android:text="Quiz type: "
+                            android:layout_marginStart="16dp"
+                            android:textSize="16sp"
+                            android:textColor="@color/material_blue_grey_700"
+                            android:textStyle="normal"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/tv_review_quiz_is_timed"
+                            tools:text="Timed"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="16dp"
+                            android:textSize="16sp"
+                            android:textColor="@color/material_blue_grey_700"
+                            android:textStyle="bold"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ll_4"
+                        android:layout_below="@id/ll_3"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/tv_11"
+                            android:text="Timer limit: "
+                            android:layout_marginStart="16dp"
+                            android:textSize="16sp"
+                            android:textColor="@color/material_blue_grey_700"
+                            android:textStyle="normal"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/tv_review_quiz_timer_limit"
+                            tools:text="None"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="16dp"
+                            android:textSize="16sp"
+                            android:textColor="@color/material_blue_grey_700"
+                            android:textStyle="bold"
+                            />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tv_categories"
+                        android:text="Categories"
+                        android:layout_below="@id/ll_4"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginTop="8dp"
+                        android:textSize="16sp"
+                        android:textColor="@color/material_blue_grey_700"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rv_review_quiz_categories_review"
+                        android:layout_below="@id/tv_categories"
+                        android:layout_marginTop="16dp"
+                        />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rv_review_questions"
+                        android:layout_below="@id/rv_review_quiz_categories_review"
+                        android:layout_marginTop="20dp"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/rv_review_questions"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="16dp"
+                        android:layout_alignParentBottom="true"
+                        android:weightSum="2">
+
+                        <Button
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/btn_round_primary"
+                            android:id="@+id/btn_post_quiz"
+                            android:textColor="@color/md_white"
+                            android:text="Post Quiz"
+                            android:textSize="16sp"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="32dp"
+                            android:layout_marginEnd="12dp"
+                            tools:ignore="HardcodedText" />
+
+                        <Button
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/btn_round_primary"
+                            android:id="@+id/btn_save_quiz"
+                            android:textColor="@color/md_white"
+                            android:text="Save Quiz"
+                            android:textSize="16sp"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginEnd="32dp"
+                            tools:ignore="HardcodedText" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </ScrollView>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

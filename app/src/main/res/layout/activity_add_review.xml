@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddReviewActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_above="@id/btn_post_review"
+        android:layout_marginBottom="16dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_header"
+                android:textColor="@color/material_blue_grey_700"
+                android:textStyle="bold"
+                android:text="Add Review"
+                android:textSize="24sp"
+                android:layout_marginTop="24dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_1"
+                android:layout_below="@id/tv_header"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:textSize="16sp"
+                android:text="Rating"
+                tools:ignore="HardcodedText" />
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="wrap_content"
+                android:layout_height="64dp"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/rv_score"
+                android:layout_below="@id/tv_1"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:layoutAnimation="@anim/layout_animation_fall_down"
+                />
+
+            <com.xw.repo.BubbleSeekBar
+                android:id="@+id/bsb_rating"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rv_score"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="24dp"
+                app:bsb_track_color="@color/material_blue_grey_700"
+                app:bsb_second_track_color="@color/colorPrimaryDark"
+                app:bsb_section_count="10"
+                app:bsb_max="5"
+                app:bsb_min="0"
+                app:bsb_progress="0"
+                app:bsb_seek_step_section="true"
+                app:bsb_section_text_position="below_section_mark"
+                app:bsb_touch_to_seek="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_2"
+                android:layout_below="@id/bsb_rating"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:textSize="16sp"
+                android:text="Review"
+                tools:ignore="HardcodedText" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/et_review_text"
+                android:layout_below="@id/tv_2"
+                android:layout_marginTop="8dp"
+                android:hint="Write something..."
+                tools:ignore="HardcodedText"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:inputType="text|textMultiLine|textCapSentences"
+                />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_post_review"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="16dp"
+        android:textColor="@color/md_white"
+        android:text="Post  review"
+        android:textSize="16sp"
+        android:background="@drawable/btn_round_gradient"
+        tools:ignore="HardcodedText" />
+
+</RelativeLayout>

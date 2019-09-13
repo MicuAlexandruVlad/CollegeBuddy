@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/new_quiz"
+        android:icon="@drawable/quiz"
+        android:title="Quiz"
+        android:orderInCategory="1"
+        tools:ignore="HardcodedText"
+        app:showAsAction="ifRoom" />
+
+    <item android:id="@+id/share_file"
+        android:title="Share a file"
+        android:orderInCategory="2"
+        app:showAsAction="never"
+        tools:ignore="HardcodedText" />
+
+    <item android:id="@+id/change_wallpaper"
+        android:title="Wallpaper"
+        android:orderInCategory="3"
+        app:showAsAction="never"
+        tools:ignore="HardcodedText" />
+
+    <item android:id="@+id/settings"
+        android:title="Settings"
+        android:orderInCategory="4"
+        app:showAsAction="never"
+        tools:ignore="HardcodedText" />
+
+    <item android:id="@+id/group_access_token"
+        android:title="Group Access Token"
+        android:orderInCategory="5"
+        app:showAsAction="never"
+        tools:ignore="HardcodedText" />
+
+    <item android:id="@+id/leave_group"
+        android:title="Leave Group"
+        android:orderInCategory="6"
+        app:showAsAction="never"
+        tools:ignore="HardcodedText" />
+</menu>

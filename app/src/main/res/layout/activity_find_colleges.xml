@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FindCollegesActivity"
+    android:id="@+id/rl_shape_out">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Find Colleges"
+                android:textAlignment="center"
+                android:textColor="@color/material_light_black"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_college_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_1"
+                android:layout_marginTop="20dp" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_college_list_filtered"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_1"
+                android:layout_marginTop="20dp" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_gravity="bottom|end"
+        android:backgroundTint="@color/md_white"
+        android:src="@drawable/search"
+        app:layout_anchor="@+id/scrollView2"
+        app:layout_anchorGravity="right|bottom" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rl_shape_in"
+        android:visibility="gone"
+        android:background="@color/md_white">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_2"
+            android:text="Search College"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/material_light_black"
+            android:textAlignment="center"
+            android:layout_marginTop="20dp"
+            tools:ignore="HardcodedText" />
+
+        <com.rengwuxian.materialedittext.MaterialAutoCompleteTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:met_iconLeft="@drawable/mortarboard"
+            android:id="@+id/met_search"
+            android:inputType="textCapWords"
+            android:layout_below="@id/tv_2"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/met_search"
+            android:layout_marginTop="8dp"
+            android:text="Leave field blank to show all universities"
+            android:textSize="14sp"
+            android:id="@+id/tv_3"
+            android:layout_marginStart="20dp"
+            android:textColor="@color/material_grey_500"
+            tools:ignore="HardcodedText" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:id="@+id/v_separator_1"
+            android:background="@color/colorPrimary"
+            android:layout_below="@id/tv_3"
+            android:layout_marginTop="12dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Can't find your university ?"
+            tools:ignore="HardcodedText"
+            android:id="@+id/tv_4"
+            android:layout_below="@id/v_separator_1"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:textSize="18sp"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_5"
+            android:text="@string/add_college"
+            android:textSize="16sp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_below="@id/tv_4"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_5"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="16dp"
+            android:id="@+id/btn_add_college"
+            android:textSize="16sp"
+            android:text="Add"
+            android:elevation="8dp"
+            android:textColor="@color/md_white"
+            android:background="@drawable/btn_round_primary"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Search"
+            android:id="@+id/btn_search"
+            android:textSize="16sp"
+            android:background="@drawable/btn_round_primary"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="20dp"
+            android:textColor="@color/md_white"
+            tools:ignore="HardcodedText" />
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

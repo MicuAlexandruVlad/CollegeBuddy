@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddFacultyActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_add_faculty"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="16dp"
+        android:textColor="@color/md_black"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:text="Edit faculty"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_3"
+        android:textSize="16sp"
+        android:layout_below="@id/tv_add_faculty"
+        android:textColor="@color/material_grey_500"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="16dp"
+        android:text="Name"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_faculty_name"
+        android:inputType="textCapWords"
+        android:layout_below="@id/tv_3"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_4"
+        android:textSize="16sp"
+        android:layout_below="@id/et_faculty_name"
+        android:textColor="@color/material_grey_500"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="16dp"
+        android:text="Description (Optional)"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_faculty_description"
+        android:inputType="textCapWords"
+        android:layout_below="@id/tv_4"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"/>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_finish_editing_faculty"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:textColor="@color/md_white"
+        android:text="Finish Editing"
+        android:textSize="18sp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/btn_round_primary"
+        tools:ignore="HardcodedText" />
+
+</RelativeLayout>

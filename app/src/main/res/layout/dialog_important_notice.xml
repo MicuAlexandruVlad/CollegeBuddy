@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rl1"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="24dp">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lav_warning"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            app:lottie_fileName="warning.json"
+            app:lottie_autoPlay="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/lav_warning"
+            android:layout_centerVertical="true"
+            android:id="@+id/tv_dialog_title"
+            android:textColor="@color/md_black"
+            android:textSize="20sp"
+            android:layout_marginStart="16dp"
+            tools:text="Notice"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_dialog_message"
+        android:layout_below="@id/rl1"
+        android:textColor="@color/md_black"
+        android:textSize="16sp"
+        android:layout_marginStart="24dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        tools:text="Message"
+        android:textStyle="normal"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ok"
+        android:id="@+id/btn_ok"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/tv_dialog_message"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/transparent"
+        android:textColor="@color/colorAccent"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        tools:ignore="HardcodedText" />
+
+</RelativeLayout>

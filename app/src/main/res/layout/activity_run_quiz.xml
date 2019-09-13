@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RunQuizActivity"
+    android:background="@color/md_white"
+    android:animateLayoutChanges="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rl_quiz_welcome"
+        android:background="@drawable/btn_layout_round"
+        android:layout_centerVertical="true"
+        android:layout_margin="40dp"
+        android:elevation="12dp"
+        android:visibility="visible"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_quiz_name"
+            android:textSize="20sp"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            tools:text="Science Quiz First Semester"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ll_creator"
+            android:orientation="horizontal"
+            android:layout_below="@id/tv_quiz_name"
+            android:layout_marginTop="8dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Created by:"
+                android:layout_marginStart="16dp"
+                android:textSize="14sp"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_created_by"
+                tools:text="John Brick"
+                android:textColor="@color/material_amber_accent_700"
+                android:layout_marginStart="8dp"
+                android:textSize="14sp"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_quiz_description"
+            android:layout_below="@id/ll_creator"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:textColor="@color/md_black"
+            tools:text="@string/lorem_2"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_quiz_description"
+            android:id="@+id/ll_2"
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp"
+            android:weightSum="2">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/rl_3"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:id="@+id/iv_1"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/question"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/iv_1"
+                    android:id="@+id/tv_num_questions"
+                    android:layout_marginStart="8dp"
+                    tools:text="100 questions"
+                    android:textColor="@color/material_blue_grey_700"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:layout_centerVertical="true"
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/rl_4"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@id/iv_2"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginStart="8dp"
+                    android:id="@+id/tv_timer"
+                    tools:text="No limit"
+                    android:textColor="@color/material_blue_grey_700"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:layout_centerVertical="true"
+                    />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:id="@+id/iv_2"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="16dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/timer"
+                    />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_2"
+            android:layout_marginTop="12dp"
+            android:id="@+id/rl_5">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginEnd="12dp"
+                android:layout_marginStart="16dp"
+                android:id="@+id/tv_difficulty"
+                android:text="Difficulty:"
+                android:textColor="@color/md_black"
+                android:textStyle="normal"
+                android:textSize="16sp"
+                android:layout_centerVertical="true"
+                tools:ignore="HardcodedText" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:id="@+id/iv_difficulty"
+                android:layout_toEndOf="@id/tv_difficulty"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="8dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/difficulty_high"
+                />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_categories_label"
+            android:layout_below="@id/rl_5"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="Categories"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp"
+            tools:ignore="HardcodedText" />
+
+        <me.gujun.android.taggroup.TagGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tg_categories"
+            android:layout_below="@id/tv_categories_label"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:atg_borderColor="@color/colorPrimaryDark"
+            app:atg_textColor="@color/md_white"
+            app:atg_backgroundColor="@color/colorAccent"
+            app:atg_textSize="16sp"
+            app:atg_horizontalPadding="12dp"
+            app:atg_verticalPadding="8dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:id="@+id/tv_2"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold"
+            android:layout_below="@id/tg_categories"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="Are you ready ?"
+            tools:ignore="HardcodedText" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rl_start_quiz"
+            android:layout_below="@id/tv_2"
+            android:layout_marginTop="12dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/btn_round_primary"
+            android:layout_marginBottom="16dp"
+            >
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:id="@+id/iv_play"
+                android:layout_marginStart="20dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/play_btn"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:id="@+id/tv_1"
+                android:textColor="@color/md_white"
+                android:textSize="16sp"
+                android:text="Start"
+                android:layout_marginStart="8dp"
+                android:layout_toEndOf="@id/iv_play"
+                android:layout_marginEnd="20dp"
+                tools:ignore="HardcodedText" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:id="@+id/rl_quiz_layout">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rl_header"
+            >
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:id="@+id/iv_back"
+                android:src="@drawable/go_back"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_remaining_questions"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:textSize="16sp"
+                tools:text="1 of 24"
+                android:textStyle="bold"
+                android:textColor="@color/md_black"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_cancel_quiz"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_alignParentEnd="true"
+                android:textSize="16sp"
+                android:text="Cancel"
+                tools:ignore="HardcodedText" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/rl_quiz_question"
+            android:layout_below="@id/rl_header"
+            android:layout_marginTop="16dp">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/sv_question">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:animateLayoutChanges="true">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:id="@+id/rl_timer_holder">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:id="@+id/iv_timer"
+                            android:src="@drawable/timer"
+                            />
+
+                        <TextView
+                            android:id="@+id/tv_timer_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_toEndOf="@id/iv_timer"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            tools:text="24:32 left" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/rl_timer_holder"
+                        android:id="@+id/tv_question"
+                        android:textSize="20sp"
+                        android:textColor="@color/md_black"
+                        android:textStyle="bold"
+                        tools:text="Some text placeholder ?"
+                        android:textAlignment="center"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rv_answers"
+                        android:layout_below="@id/tv_question"
+                        android:layout_marginTop="12dp"
+                        android:paddingTop="40dp"
+                        android:layout_marginBottom="40dp"
+                        android:layoutAnimation="@anim/layout_animation_fall_down"
+                        />
+
+                </RelativeLayout>
+
+            </ScrollView>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_next_question"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="36dp"
+                android:layout_marginStart="36dp"
+                android:textSize="16sp"
+                android:text="Next Question"
+                android:background="@drawable/btn_round_primary"
+                android:textColor="@color/md_white"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                tools:ignore="HardcodedText" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:id="@+id/rl_score_layout"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_top"
+            android:textStyle="bold"
+            android:text="Let's see your results"
+            android:textColor="@color/colorAccent"
+            android:layout_centerHorizontal="true"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:textAlignment="center"
+            android:textSize="22sp"
+            android:layout_marginTop="16dp"
+            tools:ignore="HardcodedText" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:id="@+id/iv_illustration_1"
+            android:src="@drawable/quiz_results"
+            android:layout_below="@id/tv_top"
+            android:layout_marginTop="16dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/tv_3"
+            android:layout_below="@id/iv_illustration_1"
+            android:textSize="16sp"
+            android:text="Completion Rate"
+            android:layout_marginTop="24dp"
+            android:textColor="@color/md_black"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_completion_rate"
+            android:layout_below="@id/tv_3"
+            android:textAlignment="center"
+            android:layout_marginTop="24dp"
+            android:textSize="50sp"
+            android:textColor="@color/colorPrimaryDark"
+            tools:text="40%"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_final_message"
+            android:layout_below="@id/tv_completion_rate"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:textColor="@color/material_grey_700"
+            android:textAlignment="center"
+            android:textSize="15sp"
+            android:visibility="invisible"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_5"
+            android:text="You have placed"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            android:visibility="invisible"
+            android:layout_below="@id/tv_final_message"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/md_black"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_leader_board_placement"
+            android:layout_below="@id/tv_5"
+            android:textAlignment="center"
+            android:layout_marginTop="12dp"
+            android:textSize="50sp"
+            android:visibility="invisible"
+            android:textColor="@color/colorPrimaryDark"
+            tools:text="25th"
+            android:textStyle="bold"
+            />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/ll_buttons_holder">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:padding="16dp"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimaryDark"
+                android:id="@+id/btn_finish"
+                android:text="Finish"
+                android:textColor="@color/md_white"
+                android:textSize="16sp"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:padding="16dp"
+                android:layout_height="wrap_content"
+                android:background="@color/colorAccent"
+                android:id="@+id/btn_see_results"
+                android:text="See results"
+                android:textColor="@color/md_white"
+                android:textSize="16sp"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "924432584597",
+    "firebase_url": "https://licenseapp-1543235244351.firebaseio.com",
+    "project_id": "licenseapp-1543235244351",
+    "storage_bucket": "licenseapp-1543235244351.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:924432584597:android:9628d9d197d5db06",
+        "android_client_info": {
+          "package_name": "com.example.micua.licenseapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "924432584597-24i14l55sqvgtk091ge01mch68l0dlr2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.micua.licenseapp",
+            "certificate_hash": "e7ff657b3030fc7ef01094142e0931f0ed24b2e0"
+          }
+        },
+        {
+          "client_id": "924432584597-nge6nvcdi3ppkic61aarct9fibq1e1p1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyABSgVIPETXOAGnxZkPGaBNbd53aqAA5T4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "924432584597-nge6nvcdi3ppkic61aarct9fibq1e1p1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#5048B4</color>
+    <color name="colorPrimaryDark">#5048B4</color>
+    <color name="colorAccent1">#52EADE</color>
+    <color name="colorAccent">@color/material_amber_accent_700</color>
+
+    <color name="logoLightBlue">#00B5CC</color>
+    <color name="difficultyLow">#49DCB1</color>
+    <color name="difficultyMedium">#FD5200</color>
+    <color name="difficultyHigh">#DB324D</color>
+    <color name="black">#000000</color>
+    <color name="darkBlue">#022B3A</color>
+</resources>

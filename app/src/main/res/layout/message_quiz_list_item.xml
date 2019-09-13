@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_marginTop="16dp"
+    android:layout_marginBottom="16dp"
+    android:id="@+id/rl_body"
+    android:background="@drawable/message_quiz"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:id="@+id/tv_sep_1"
+        android:background="@color/colorPrimaryDark"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_shared_by"
+        tools:text="Saint Jones shared a quiz"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/tv_sep_1"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/md_white"
+        android:layout_marginTop="12dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_1"
+        android:layout_below="@id/tv_shared_by"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="4dp"
+        android:text="Give it a try"
+        android:textSize="15sp"
+        android:textColor="@color/colorAccent"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_start_quiz"
+        android:layout_below="@id/tv_1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:textColor="@color/md_white"
+        android:text="Start"
+        android:background="@drawable/btn_round_primary"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:id="@+id/tv_sep_2"
+        android:background="@color/colorPrimaryDark"
+        android:layout_below="@id/btn_start_quiz"
+        android:layout_marginTop="12dp"
+        />
+
+</RelativeLayout>

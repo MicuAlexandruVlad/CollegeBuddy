@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".SignUpActivity">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_sign_up"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="16dp"
+            android:textColor="@color/md_black"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:text="Sign Up"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_1"
+            android:textColor="@color/md_black"
+            android:layout_below="@id/tv_sign_up"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
+            android:text="Register today for free"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_2"
+            android:textSize="16sp"
+            android:textColor="@color/material_grey_500"
+            android:layout_below="@id/tv_1"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="16dp"
+            android:text="Gender:"
+            tools:ignore="HardcodedText" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/ll_gender"
+            android:layout_below="@id/tv_2"
+            android:layout_marginTop="16dp">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.75"/>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="8dp"
+                android:background="#FAFAFA"
+                app:cardElevation="4dp"
+                android:id="@+id/cv_male_holder"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_height="100dp"
+                    android:id="@+id/iv_male"
+                    android:src="@drawable/boy"
+                    />
+
+            </android.support.v7.widget.CardView>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.75"/>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="8dp"
+                android:background="#FAFAFA"
+                app:cardElevation="4dp"
+                android:id="@+id/cv_female_holder"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_height="100dp"
+                    android:id="@+id/iv_female"
+                    android:src="@drawable/girl"
+                    />
+
+            </android.support.v7.widget.CardView>
+
+
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.75"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_3"
+            android:textSize="16sp"
+            android:textColor="@color/material_grey_500"
+            android:layout_below="@id/ll_gender"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="16dp"
+            android:text="First Name"
+            tools:ignore="HardcodedText" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/et_first_name"
+            android:inputType="textCapWords"
+            android:layout_below="@id/tv_3"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="8dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_4"
+            android:textSize="16sp"
+            android:textColor="@color/material_grey_500"
+            android:layout_below="@id/et_first_name"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="16dp"
+            android:text="Last Name"
+            tools:ignore="HardcodedText" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/et_last_name"
+            android:inputType="textCapWords"
+            android:layout_below="@id/tv_4"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="8dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_5"
+            android:textSize="16sp"
+            android:textColor="@color/material_grey_500"
+            android:layout_below="@id/et_last_name"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="16dp"
+            android:text="Email"
+            tools:ignore="HardcodedText" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/et_email"
+            android:inputType="textEmailAddress"
+            android:layout_below="@id/tv_5"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="8dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_6"
+            android:textSize="16sp"
+            android:textColor="@color/material_grey_500"
+            android:layout_below="@id/et_email"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="16dp"
+            android:text="Password"
+            tools:ignore="HardcodedText" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/et_password"
+            android:inputType="textPassword"
+            android:layout_below="@id/tv_6"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="8dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_7"
+            android:textSize="16sp"
+            android:textColor="@color/material_grey_500"
+            android:layout_below="@id/et_password"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="16dp"
+            android:text="Confirm Password"
+            tools:ignore="HardcodedText" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/et_confirm_password"
+            android:inputType="textPassword"
+            android:layout_below="@id/tv_7"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="8dp"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/ll_terms_of_service"
+            android:layout_below="@id/et_confirm_password"
+            android:layout_marginTop="16dp"
+            android:layout_centerHorizontal="true">
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/cb_agree"
+                android:checked="false"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_marginStart="8dp"
+                android:textColor="@color/md_black"
+                android:text="I agree to the "
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="@color/material_blue_600"
+                android:text="TOS "
+                android:id="@+id/tv_terms_of_service"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="@color/md_black"
+                android:text=" &amp; "
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:id="@+id/tv_privacy_policy"
+                android:textColor="@color/material_blue_600"
+                android:text="Privacy Policy"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_sign_up"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:textColor="@color/md_white"
+            android:layout_below="@id/ll_terms_of_service"
+            android:text="Sign Up"
+            android:textSize="18sp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/btn_round_primary"
+            tools:ignore="HardcodedText" />
+
+    </RelativeLayout>
+</ScrollView>
